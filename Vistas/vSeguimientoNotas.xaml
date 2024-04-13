@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="candinoT2S2.Vistas.vSeguimientoNotas"
+             Title="vSeguimientoNotas"
+             xmlns:behavior="clr-namespace:candinoT2S2.Behaviors;assembly=candinoT2S2">
+    <ScrollView Margin="20" VerticalOptions="FillAndExpand">
+        <VerticalStackLayout>
+
+            <Image x:Name="logoisrael" Source="logoisrael.png"
+                   HeightRequest="100"/>
+
+            <Label 
+                Text="Seguimiento de notas"
+                TextColor="DarkSalmon"
+                FontSize="24"
+                HorizontalTextAlignment="Center" 
+                FontAttributes="Bold"/>
+
+            <StackLayout Padding="5" >
+                <Picker x:Name="pkNombreEstudiante" Title="Nombre Estudiante" WidthRequest="200">
+                    <Picker.Items>
+                        <x:String>Carlos Andino</x:String>
+                        <x:String>Alejandro Andino</x:String>
+                        <x:String>José Cunalata</x:String>
+                        <x:String>Santiago Loachamin</x:String>
+                        <x:String>Alejandro Torres</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <BoxView Style="{StaticResource HorizontalSeparator}" />
+
+            <Label Padding="5"
+                Text="Parcial 1"
+                TextColor="DarkSalmon"
+                FontSize="20"
+                HorizontalTextAlignment="Center" 
+                FontAttributes="Bold"/>
+
+            <StackLayout Padding="10" Spacing="10">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label 
+                    Text="Nota Seguimiento 1"
+                    TextColor="Black"
+                    FontSize="14"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start"/>
+
+                    <Entry x:Name="txtNotaSeguimiento"
+                    Margin="5,0,0,0"
+                    Placeholder="Nota Seguimiento 1"
+                    MaxLength="10"
+                    HeightRequest="40"
+                    WidthRequest="150"
+                    HorizontalOptions="Start"
+                    Keyboard="Numeric"/>
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label 
+                    Text="Nota Examen 1"
+                    TextColor="Black"
+                    FontSize="14"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start"/>
+
+                    <Entry x:Name="txtNotaExamen"
+                    Margin="35,0,0,0"
+                    Placeholder="Nota Examen 1"
+                    MaxLength="10"
+                    HeightRequest="50"                  
+                    WidthRequest="150"
+                    HorizontalOptions="Start"
+                    Keyboard="Numeric"/>
+
+
+
+                </StackLayout>
+                <BoxView Style="{StaticResource HorizontalSeparator}" />
+
+            </StackLayout>
+
+            <Label 
+                Text="Parcial 2"
+                TextColor="DarkSalmon"
+                FontSize="18"
+                HorizontalTextAlignment="Center" 
+                FontAttributes="Bold"/>
+
+            <StackLayout Padding="10" Spacing="10">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label 
+                    Text="Nota Seguimiento 2"
+                    TextColor="Black"
+                    FontSize="14"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start"/>
+
+                    <Entry x:Name="txtNotaSeguimiento2"
+                    Margin="5,0,0,0"
+                    Placeholder="Nota Seguimiento 2"
+                    MaxLength="10"
+                    HeightRequest="40"
+                    WidthRequest="150"
+                    HorizontalOptions="Start"
+                    Keyboard="Numeric"/>
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label 
+                    Text="Nota Examen 2"
+                    TextColor="Black"
+                    FontSize="14"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start"/>
+
+                    <Entry x:Name="txtNotaExamen2"
+                    Margin="35,0,0,0"
+                    Placeholder="Nota Examen 2"
+                    MaxLength="10"
+                    HeightRequest="50"                  
+                    WidthRequest="150"
+                    HorizontalOptions="Start"
+                    Keyboard="Numeric"/>
+
+                </StackLayout>
+                <BoxView Style="{StaticResource HorizontalSeparator}" />
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblFecha" 
+                   Text="Fecha de cálculo"
+                   Margin="0,15,0,0"                                          
+                   FontSize="14" 
+                   TextColor="Black"/>
+
+                    <DatePicker x:Name="dpFecha"  
+                    Margin="25,0,0,0"                       
+                    Format="MM/dd/yyyy"
+                    HeightRequest="50"
+                    FontSize="16"/>
+                </StackLayout>
+                <BoxView Style="{StaticResource HorizontalSeparator}" />
+
+                <Button x:Name="btnCalcular"
+                    Text="Calcular Resultados"
+                    FontSize="15"
+                    BackgroundColor="DarkSalmon"
+                    Clicked="btnCalcular_Clicked"/>
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
