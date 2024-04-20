@@ -11,6 +11,11 @@
             <Image x:Name="logoisrael" Source="logoisrael.png"
                    HeightRequest="100"/>
 
+            <Label x:Name="lblUsuario"
+               FontSize="14"
+               HorizontalTextAlignment="End"
+               TextColor="DarkSalmon"/>
+            
             <Label 
                 Text="Seguimiento de notas"
                 TextColor="DarkSalmon"

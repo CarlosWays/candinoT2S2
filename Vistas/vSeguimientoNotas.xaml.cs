@@ -2,9 +2,11 @@ namespace candinoT2S2.Vistas;
 
 public partial class vSeguimientoNotas : ContentPage
 {
-	public vSeguimientoNotas()
+	public vSeguimientoNotas(string usuario)
 	{
         InitializeComponent();
+        DisplayAlert("Alerta", "Bienvenido/a " + usuario, "Salir");
+        lblUsuario.Text = "Usuario conectado: " + usuario;
     }
     string strResultado = string.Empty;
     string strNombreEst = string.Empty;

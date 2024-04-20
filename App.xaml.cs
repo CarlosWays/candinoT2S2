@@ -6,6 +6,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new Vistas.vSeguimientoNotas();
+		MainPage = new NavigationPage(new Vistas.vLogin());
 	}
 }
